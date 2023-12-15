@@ -4,10 +4,10 @@ const cors = require('cors');
 
 const port = 4000;
 
-app.use(express.json({ limit: process.env.PAYLOAD_SIZE_LIMIT }));
+app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({
   extended: true,
-  limit: process.env.PAYLOAD_SIZE_LIMIT,
+  limit: '100mb',
 }));
 app.use(cors())
 
